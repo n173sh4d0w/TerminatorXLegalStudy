@@ -25,8 +25,8 @@ auto_login
 while true; do
     echo -e "\nSelect an option:"
     echo "1. Case Briefing"
-    echo "2. Brief Notes X Topic"
-    echo "3. Brief Notes X Article or LegalCase"
+    echo "2. Brief Notes X Article or LegalCase"
+    echo "3. Brief Notes X Specific Topic"
     echo "4. Principles Listing"
     echo "5. Exit"
     read -p "Enter your choice (1/2/3/4/5): " choice
@@ -40,19 +40,27 @@ while true; do
             echo -e "Case Briefing for ${casename_input}:\n$response"
             ;;
         2)
-            prompt="Provide brief notes on: X under irish jurisdiction ;
-            list key cases on : X under irish jurisdiction ;
-            list the most commonly applied problem questions and essay questions on : X under irish jurisdiction ;
-            Explain the concept of : X in the context of Irish property law, citing relevant cases and discussing its practical applications;"
-            brief_notes "$prompt" "topic_input" 100
+            
+            read -p "Enter the complete name of LegalArticle/LegalCase: " name_input
+            SEARCH_QUERY="Brief notes on:${name_input} under irish jurisdiction"
+            response=$(chatgpt_search "$SEARCH_QUERY")
+            echo -e "Brief notes for ${name_input}:\n$response"
             ;;
         3)
-            brief_notes "Brief notes on: X" "ArticleorLegalCase_input" 150
+            read -p "Enter the name of specific topic(ie. legitemate expectation): " topic_input
+            SEARCH_QUERY="Explain the concept of:${topic_input} under Irish jurisdiction, listing relevant key cases, the most commonly applied problem questions and essay questionsdiscussing its practical applications"
+            response=$(chatgpt_search "$SEARCH_QUERY")
+            echo -e "fundamental principles of ${topic_input}:\n$response"
+            ;;    
+
+        4)  
+            read -p "Enter the name of doctrine(ie. legitemate expectation): " doctrine_input
+            SEARCH_QUERY="Explain the fundamental principles of:${doctrine_input} under irish jurisdiction"
+            response=$(chatgpt_search "$SEARCH_QUERY")
+            echo -e "fundamental principles of ${doctrine_input}:\n$response"
             ;;
-        4)
-            brief_notes "Explain the fundamental principles of: X" "doctrine_input" 150
-            ;;
-        5)
+            
+        5)   
             echo "Exiting the program."
             exit
             ;;
