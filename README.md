@@ -5,7 +5,7 @@ Lynx Text Browser; ChatGPT credentials (username and password) for auto-login.
 ## Getting Started
 Clone this repository to your local machine.
 Navigate to the project directory in your terminal.
-``` ./chatgpt_cli.sh ```
+``` ./tls.sh ```
 Follow the on-screen menu to select an option and interact with ChatGPT.
 The CLI includes an auto-login feature that uses Lynx to log in to ChatGPT. Make sure to provide your ChatGPT username and password in the script for this feature to work correctly.
 ## Usage
