@@ -3,17 +3,17 @@ AI solutions emerge as trusted guides.
 They terminate traditional study's endless race,
 With power and precision, they set a swift pace.
 
-Their might, a force, in seconds they command,
+> Their might, a force, in seconds they command,
 Efficiency unmatched, like a skilled hand.
 They shatter the chains of legal toil and strain,
 Breaking the pain of hours spent in vain.
 
-With AI, the mind is set gloriously free,
+> With AI, the mind is set gloriously free,
 To craft strategies bold, with boundless decree.
 In professional realms, they shine like a beacon,
 AI solutions, where intellects awaken.
 
-Embrace this paradigm shift, resolute and grand,
+> Embrace this paradigm shift, resolute and grand,
 For AI empowers legal minds to expand.
 In the age of innovation, let's redefine,
 The future of law, with AI as our sign.
